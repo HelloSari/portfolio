@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一起探索台灣的美 | 台灣步道指南</title>
+    <link rel="shortcut icon" href="images/icon.png">
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!-- leaflet cluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/a9f4ed6307.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.css">
+
+
+
+</head>
+
+<body>
+    <div class="container row">
+        <div class="side-bar col-4 col-md-12">
+            <div class="title col-12 row">
+                <h1>台灣步道指南</h1>
+                <div id="openSearch" class="open-search fas fa-bars "></div>
+            </div>
+            <div class="search col-12 " id="search">
+                <div class="search__select col-12">
+                    <select class="col-12" name="" id="searchItem" class="search__item"></select>
+                </div>
+                <ul class="search__data col-12" id="searchData">
+                </ul>
+            </div>
+        </div>
+        <div class="map col-8 col-md-12" id="map">
+        </div>
+    </div>
+    <!-- leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <!-- leaflet cluster -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <script src="js/all.js"></script>
+
+</body>
+</html>

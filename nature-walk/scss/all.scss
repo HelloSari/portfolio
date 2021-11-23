@@ -1,0 +1,202 @@
+@import "css-reset";
+
+// breakpoints
+$md : 767px;
+$sm : 576px;
+.container{
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 12{
+    .col-#{$i}{
+        width: $i * 8.33333%; 
+    }
+}
+
+@media (max-width: $md){
+    @for $i from 1 through 12{
+        .col-md-#{$i}{
+            width: $i * 8.33333%; 
+        }
+    }
+}
+
+
+@media (max-width: $sm){
+    @for $i from 1 through 12{
+        .col-sm-#{$i}{
+            width: $i * 8.33333% 
+        }
+    }
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.title{
+    @media(max-width: $md){
+        padding: 15px;
+        position: fixed;
+        top:0;
+        right: 0;
+        left:0;
+        background-color: #abd1b5;
+        z-index: 10;
+    }
+}
+.open-search{
+    display: none;
+    font-size: 36px;
+    color:#516E41;
+    z-index: 10;
+    background-color: rgba(245, 245, 220, 0);
+    text-align: right;
+    &:hover{
+        cursor: pointer;
+    }
+    @media(max-width: $md){
+        display:block;
+    }
+}
+
+//螢幕小於767漢堡選單點選，資訊欄由下方冒出
+.container.active{
+.side-bar{
+    height: 300px;
+    padding: 15px;
+    background-color: #ABD1B5;
+    .search .search__data{
+        height: calc(300px - 59px);
+    }
+}
+.map{
+    height: calc(100vh - 66px - 300px)
+}
+}
+.side-bar{
+    height: 100vh;
+    padding: 15px;
+    background-color: #ABD1B5;
+    transition: height 3s;
+    @media(max-width: $md){
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        padding: 0;
+    }
+h1{
+    font-size: 36px;
+    color: #3D3B3C;
+    margin-bottom: 15px;
+    font-weight: 500;
+    @media(max-width:$md){
+            margin-bottom: 0;
+
+    }
+}
+.search{
+    
+    select{
+        line-height: 36px;
+        font-size: 24px;
+        color: #3D3B3C;
+        border: none;
+        margin-bottom: 15px;
+        background-color: #EDF4ED;
+        border-radius: 5px;
+        padding-left:15px ;
+    }
+    .search__data{
+        height: calc(100vh - 110px);
+        overflow-y: scroll;
+        .marker-link{
+            background-color: #EDF4ED;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            &:hover{
+                cursor: pointer;
+            }
+            h2{
+                margin-bottom: 15px;
+                color: #3D3B3C;
+                font-size: 24px;
+            }
+            p{
+                color: #3D3B3C;
+                font-size: 16px;
+                line-height: 20px;
+
+            }
+            span{
+                color: #3D3B3C;
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .QA-group{
+                li{
+                    color: #3D3B3C;
+                    font-size: 16px;
+                    line-height: 20px;
+                    i{
+                        color: #516E41;
+                    }
+                }
+                
+            }
+        }
+        //資訊欄點選樣式
+        .marker-link.active{
+            background-color: #516E41;
+            h2{
+                color: #EDF4ED;
+            }
+            span{
+                color: #EDF4ED;
+            }
+            p{
+                color: #EDF4ED;
+            }
+            .QA-group{
+                li{
+                    color: #EDF4ED;
+                    i{
+                        color: #EDF4ED;
+                    }
+                }
+                
+            }
+
+        }
+        
+    }
+
+}
+}
+.map{
+    height: 100vh;
+    z-index: 5;
+    transition: height 3s;
+    @media(max-width: $md){
+        //title為fixed因此下面map需往下移title高度(66px)，map總高度也須減少tile高度(66px)以免破格
+        height: calc(100vh - 66px);
+        margin-top: 66px;
+    }
+    
+}
+
+.leaflet-popup-content-wrapper{
+    background-color: #EDF4ED;
+    color: #516E41;
+}
+.leaflet-popup-tip{
+    background-color: #EDF4ED;
+}
+

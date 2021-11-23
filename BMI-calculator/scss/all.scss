@@ -1,0 +1,181 @@
+@import "css-reset";
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    
+}
+.all-but-footer{
+    min-height: calc(100vh - 93px) ;
+}
+body{
+    background-color: #f5f5f5;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 74px;
+    padding-bottom: 50px;
+    background: #424242;
+    flex-wrap: wrap;
+    padding-right: 5%;
+    padding-left: 11%;
+
+
+    h1{
+        background-image: url(../images/BMICLogo.png);
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        width: 117px; 
+        background-position: center center;
+        height: 117px;
+        @media (max-width: 768px){
+            margin: 0 auto;
+        }
+    }
+    .insert-data{
+        width: 31%;
+        @media (max-width: 768px){
+            width: 100%;
+            margin-top: 23px;
+        }
+        label{
+            display: inline-block;
+            font-size: 18px;
+            color: #FFD366;
+            width: 100%;
+            margin-bottom: 7px;
+        }
+        input{
+            display: inline-block;
+            background-color: rgba(255,255,255,0.18);
+            border: 2px solid #FFD366;
+            border-radius: 10px;
+            line-height: 40px;
+            font-size: 24px;
+            width: 100%;
+            margin-bottom: 23px;
+            padding-left: 16px;
+        }
+    }
+    .result{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            background: #FFD366;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            font-size: 24px;
+            color: #424242;
+            &:hover{
+                cursor: pointer;
+                box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+            }
+            &:active{
+                background-color: #DEA921;
+            }
+        }
+        .refresh{
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-65%,80%);
+            display: inline-flex;
+            opacity: 0;
+            .fa-sync-alt::before{
+                font-size: 19px;
+                color: #424242;
+                
+            }
+        }
+        h2{
+            font-size: 36px;
+            width: 150px;
+            transform: translate(-12px,0)
+        }
+
+    }
+
+}
+
+.document{
+    padding-top: 48px;
+    padding-bottom: 48px;
+    
+    >h3{
+        font-size: 24px;
+        color: #424242;
+        text-align: center;
+        margin-bottom: 36px;
+    }
+}
+
+.document__content{
+    
+    li{
+        display: flex;
+        background-color: #FFFFFF;
+        margin-bottom: 16px;
+        max-width: 624px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        flex-wrap: wrap;
+
+        h3{
+            width: 20%;
+            font-size: 20px;
+            padding-left: 12px;
+            line-height: 62px;
+            @media(max-width: 768px){
+                width: 50%;
+                text-align: center;
+                padding-left: 0;
+                border : 1px dashed #424242;
+            }
+        }
+        p{
+            width: 20%;
+            font-size: 20px;
+            span{
+                font-size: 12px;
+                line-height: 20px;
+                margin-right: 7px;
+            }
+            &:last-child{
+                font-size: 12px;
+                @media (max-width: 768px){
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            @media(max-width: 768px){
+                width: 50%;
+                line-height: 62px;
+                text-align: center;
+                border : 1px dashed #424242;
+            }
+        }
+    }
+}
+footer{
+    background-color: #FFD366;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    width: 100%;
+    .logo{
+        width: 55px;
+        height: auto;
+        margin:0 auto;
+    }
+}

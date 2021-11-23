@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <script src="https://kit.fontawesome.com/a9f4ed6307.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="all-but-footer">
+    <header class="container">
+        <h1>BMI CALCULATOR</h1>
+        <div class="insert-data">
+            <label for="height">身高 cm</label>
+            <input id="height" type="text" name="height" placeholder="請輸入身高">
+            <label for="weight">體重 kg</label>
+            <input id="weight" type="text" name="weight" placeholder="請輸入體重" >
+        </div>
+        <div class="result"><button id="calculate">看結果</button>
+            <div id="refresh" class="refresh"></div>
+            
+            <h2 id="getStatus"></h2>
+        </div>
+    </header>
+    <div class="document container">
+        <h3>BMI 紀錄</h3>
+        <ul class="document__content" id="documentContent">
+
+        </ul>
+    </div>
+</div>
+    <footer class="container">
+        <div class="logo">
+            <img src="images/BMICLogo-footer.png" alt="LOGO">
+        </div>
+    </footer>
+</body>
+    <script src="js/all.js"></script>
+</html>
