@@ -160,7 +160,7 @@ $(window).on("load",function(){
         for(let i =0; i< products.length;i++){
             if(dataType == "全部商品"){
                 str+= 
-                `<li class="product-list__item col-lg-4 col-md-6 col-12">
+                `<li class="product-list__item col-md-4 col-12">
                     <div class="img"><div class="overlay fas fa-search"></div><img src=${products[i].img1}></div>
                     <p class="product-name col-12">${products[i].name}</p>
                     <p class="col-12"> ${products[i].price}</p>

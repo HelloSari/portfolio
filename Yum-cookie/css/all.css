@@ -584,6 +584,7 @@ section {
 @media (min-width: 768px) {
   .our-story .container .our-story__content {
     order: 2;
+    padding-left: 15px;
   }
 }
 
@@ -685,6 +686,12 @@ section {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .ingredient .container .ingredient__img {
+    padding-left: 15px;
+  }
+}
+
 .ingredient .container .ingredient__img img {
   border-radius: 5px;
   box-shadow: -1px 1px 2px #2E2623;
@@ -748,6 +755,15 @@ section {
 
 .flavor .container li:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .flavor .container li {
+    padding-right: 15px;
+  }
+  .flavor .container li:last-child {
+    padding: 0;
+  }
 }
 
 .maincontainer {
@@ -860,6 +876,12 @@ section {
 
 .news {
   margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .news {
+    padding-right: 15px;
+  }
 }
 
 .news h2 {
@@ -1111,12 +1133,17 @@ footer .container .instruction li a:hover {
 
 .product-list__items {
   justify-content: flex-start;
-  column-gap: 5;
 }
 
 @media (min-width: 768px) {
   .product-list__items {
     column-gap: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-list__items {
+    column-gap: 5;
   }
 }
 
@@ -1433,6 +1460,7 @@ footer .container .instruction li a:hover {
 .membership .membership__sidebar {
   border: 3px solid #7F6962;
   padding: 15px;
+  margin-bottom: 15px;
 }
 
 .membership .membership__sidebar a {
@@ -1460,6 +1488,7 @@ footer .container .instruction li a:hover {
   padding: 15px;
   border: 3px dashed #7F6962;
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .membership .membership__content .membership__item {
